@@ -1,0 +1,471 @@
+/*html, body {
+        width:100%;
+        height:100%;
+        padding:0;
+        margin:0;
+        overflow-x:hidden;
+}*/
+/*#skrollr-body .skrollable {position:fixed;}*/
+.skrollable {
+  /*
+     * First-level skrollables are positioned relative to window
+     */
+  position: relative;
+
+  /*
+     * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+     */
+  z-index: 100;
+}
+
+/*.skrollr-mobile .skrollable {
+    
+            May cause issues on Android default browser (see #331 on GitHub).
+    
+    position:absolute;
+}*/
+
+.skrollable .skrollable {
+  /*
+     * Second-level skrollables are positioned relative their parent skrollable
+     */
+  position: absolute;
+}
+
+.skrollable .skrollable .skrollable {
+  /*
+     * Third-level (and below) skrollables are positioned static
+     */
+  position: static;
+}
+
+#progress {
+  height: 2%;
+  background: #444;
+  bottom: 0;
+  z-index: 200;
+}
+
+#scrollbar {
+  position: fixed;
+  right: 2px;
+  height: 50px;
+  width: 6px;
+  background: #444;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  z-index: 300;
+  border-radius: 3px;
+}
+
+.skrollr-desktop #scrollbar {
+  display: none;
+}
+
+#bg1,
+#bg2,
+#bg3 {
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg_ganga.jpg) repeat 0 0;
+}
+
+/*#bg2 {
+        z-index:49;
+        background-image:url(../images/bubbles2.png);
+}*/
+
+#bg3 {
+  z-index: 48;
+  background-image: url(../images/bg_ganga.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+#intro {
+  width: 80%;
+  left: 50%;
+  top: 1em;
+  margin-left: -40%;
+  padding: 2em;
+  background: #fff;
+  text-align: center;
+  border-radius: 1em;
+
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#intro .arrows {
+  font-size: 2em;
+  color: #09f;
+}
+
+#transform {
+  width: 70%;
+  left: 50%;
+  top: 20%;
+  margin-left: -35%;
+  text-align: center;
+  font-size: 150%;
+}
+
+#properties {
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  text-align: center;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#easing_wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/*#easing {
+        top:10%;
+        width:50%;
+        z-index:101;
+}*/
+
+.circle_box {
+  transition: 0.5s all;
+  background: url(../images/gola.png) no-repeat center;
+  background-size: contain;
+  border-radius: 100%;
+  z-index: 99;
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle_box.active {
+  opacity: 0 !important;
+}
+.circle_box2 {
+  position: absolute;
+  padding: 0px 50px;
+  left: 0px;
+  top: 60%;
+  opacity: 0 !important;
+  transition: 0.5s all !important;
+}
+.circle_box2 img {
+  max-width: 100%;
+}
+.circle_box2.active {
+  opacity: 1 !important;
+}
+#download {
+  width: 80%;
+  left: 10%;
+  height: 80%;
+  padding: 3em;
+  border: 0 solid #222;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.drop {
+  background: linear-gradient(147.53deg, #7ea7f3 19.44%, #3939aa 95.02%);
+  transform: rotate(-93.48deg);
+  border-radius: 100%;
+}
+.drop1 {
+  width: 68px;
+  height: 68px;
+}
+.drop2 {
+  width: 38px;
+  height: 38px;
+}
+.drop3 {
+  width: 100px;
+  height: 100px;
+}
+.drop4 {
+  width: 66px;
+  height: 66px;
+}
+.drop5 {
+  width: 100px;
+  height: 100px;
+}
+.drop6 {
+  width: 36px;
+  height: 36px;
+}
+/*.drop7{width:66px; height:66px;}*/
+.drop7 {
+  width: 66px;
+  height: 66px;
+}
+.drop8 {
+  width: 36px;
+  height: 36px;
+}
+.drop9 {
+  width: 100px;
+  height: 100px;
+}
+.drop10 {
+  width: 36px;
+  height: 36px;
+}
+.drop11 {
+  width: 100px;
+  height: 100px;
+}
+.drop12 {
+  width: 36px;
+  height: 36px;
+}
+.drop13 {
+  width: 66px;
+  height: 66px;
+}
+.drop14 {
+  width: 66px;
+  height: 66px;
+}
+
+.rotater {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transition: 0.5s all;
+}
+.skrollable .rotater.skrollable .skrollable {
+  position: absolute;
+}
+.about_que {
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  transition: 0.5s opacity;
+  z-index: 99;
+  position: absolute;
+}
+/*.trending_que{left:50%; transform:translate(-50%, 0%);}*/
+.trending_que_wrap {
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+}
+.zoom_out {
+  transform: translate(-50%, -50%) scale(0) !important;
+}
+/*.drop_wrapper{width:700px; height:700px; position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); z-index: 99;}*/
+#box-body {
+  min-height: 6000px;
+}
+#box-body > * {
+  height: 100vh;
+}
+@media (min-width: 1921px) {
+  #box-body {
+    min-height: 6790px;
+    height: auto;
+  }
+}
+@media (max-width: 1920px) and (min-width: 1851px) {
+  #box-body {
+    min-height: 6530px;
+  }
+}
+@media (max-width: 1850px) and (min-width: 1601px) {
+  #box-body {
+    min-height: 6330px;
+  }
+  #box-body > * {
+    height: 110vh;
+  }
+}
+@media (max-width: 1600px) and (min-width: 1400px) {
+  #box-body {
+    /*min-height: 6220px;*/
+    min-height: 6480px;
+  }
+  #box-body > * {
+    height: 110vh;
+  }
+  .removeFake #fake_height {
+    height: 0px;
+  }
+  #fake_height {
+    height: 1400px;
+  }
+  .circle_box.active {
+    width: 96%;
+  }
+  .gola2 {
+    right: 50px !important;
+  }
+  .gola1 {
+    left: 50px !important;
+  }
+  .gola2 img {
+    max-width: 80px;
+  }
+  .gola1 img {
+    max-width: 50px;
+  }
+}
+@media (max-width: 1399px) {
+  #box-body {
+    min-height: 6480px;
+  }
+  #box-body > * {
+    height: 110vh;
+  }
+
+  .removeFake #fake_height {
+    height: 0px;
+  }
+  #fake_height {
+    height: 1400px;
+  }
+  .gola2 {
+    right: 50px !important;
+  }
+  .gola1 {
+    left: 50px !important;
+  }
+  .gola2 img {
+    max-width: 80px;
+  }
+  .gola1 img {
+    max-width: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .for_mobile {
+    display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .for_desktop {
+    display: none;
+  }
+  .for_mobile #skrollr-body {
+    transform: none !important;
+  }
+  .for_mobile {
+    position: sticky;
+    top: 0px;
+  }
+  #box-body > * {
+    height: 100vh;
+  }
+  .removeFake #fake_height {
+    height: 0px;
+  }
+  #fake_height {
+    height: 0px;
+  }
+  .earth.skrollable-after {
+    bottom: 70px !important;
+  }
+}
+@media (max-width: 991px) {
+  .earth.skrollable-after {
+    bottom: 0px !important;
+  }
+  .rotater {
+    width: 1200px !important;
+    left: 50%;
+    margin-left: -600px;
+  }
+}
+@media (min-width: 768px) {
+  #skrollr_other {
+    padding-top: 0px !important;
+  }
+}
+@media (min-width: 1600px) {
+  .topic_course li a:before {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media (min-width: 576) {
+  .for-mobile {
+    display: none !important;
+  }
+}
+@media (max-width: 575px) {
+  .for-desktop {
+    display: none !important;
+  }
+  .removeFake #fake_height {
+    height: 0px;
+  }
+  #fake_height {
+    height: 0px;
+  }
+  #box-body {
+    height: 100vh !important;
+    position: sticky !important;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  #skrollr-body {
+    transform: none !important;
+    height: 100vh;
+    width: 100%;
+    position: fixed !important;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /*    #easing_wrapper {
+            position: fixed;
+        }*/
+  .skrollable .skrollable {
+    -webkit-backface-visibility: hidden;
+  }
+
+  /*.remove_other .main-footer{height:0px;overflow:hidden;}*/
+  .remove_other {
+    min-height: 7000px;
+  }
+  .remove_other #skrollr-body {
+    height: 100vh;
+  }
+  /*#skrollr-body{height:0px; overflow:hidden;}*/
+  /*.remove_other .scroll_big{height:0px; overflow: hidden;}*/
+}
+@media (max-width: 1500px) and (min-width: 1401px) {
+  /*    #box-body {
+        min-height: 5835px;
+    }*/
+  #fake_height {
+    height: 1045px;
+  }
+  .removeFake #fake_height {
+    height: 0px;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "ok": true,
+  "data": {
+    "uid": {
+      "domain": "acmegrade.com",
+      "u": "1.1vWp5gVOVTti2D4j8p9rdPBVnmk6XE0GY56yPUIvGoV7LAJU43g5hIP14dboYeqNA8l6z9Fnq10Q3k1daHANRuImmg4rKtrRd6e3AqmdaiGMlXIisa3lHp9",
+      "uv": 3
+    },
+    "vid": "61487b8dd326717cb68263ae-e6nLfpbHZ5FCsUzoykQef",
+    "tknExp": 1731,
+    "sk": "6429b5f9bfcd93799799c6cf",
+    "n": "V1680372064017933",
+    "e": "",
+    "te": "",
+    "chid": "a53fb590-d178-11ed-99e7-d30e34da00e5",
+    "c": [
+      {
+        "uid": null,
+        "n": "Customer Support",
+        "ut": "s",
+        "t": "c",
+        "m": "Welcome to our site, if you need help simply reply to this message, we are online and ready to help.",
+        "co": "2023-04-02T17:06:34.446Z"
+      }
+    ],
+    "cver": 4,
+    "cw": "min",
+    "sdo": true,
+    "dpt": "",
+    "vss": "vsb44.tawk.to",
+    "pcfs": false,
+    "bblc": false,
+    "lmst": 0,
+    "ast": "online",
+    "dptst": [],
+    "asver": 24,
+    "ewt": 0,
+    "settingsVersion": "2-30-0"
+  }
+}

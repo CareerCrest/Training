@@ -1,0 +1,1348 @@
+.razorpay-loader {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  top: 30%;
+  margin: 0 auto;
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  border-top-color: hsla(0, 0%, 100%, 0.7);
+  -webkit-animation: rzp-rot 1s linear infinite;
+  animation: rzp-rot 1s linear infinite;
+}
+.razorpay-loader.razorpay-loader--small {
+  width: 20px;
+  height: 20px;
+  border-width: 1px;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+#Checkout-parent .razorpay-loader {
+  top: 0;
+}
+@-webkit-keyframes rzp-rot {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes rzp-rot {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+.Status-container.Status--Success .amount-decimal {
+  font-size: 22px;
+  opacity: 0.6;
+}
+.Status-container.Status--Success .Status-redirectionMsg {
+  position: relative;
+  display: inline-block;
+  margin: 16px auto 0;
+  font-size: 12px;
+  opacity: 0.5;
+}
+.Status-container.Status--Success .Status-redirectionMsg:after,
+.Status-container.Status--Success .Status-redirectionMsg:before {
+  position: absolute;
+  content: ".";
+  color: inherit;
+  -webkit-animation: blinking 1s infinite;
+  animation: blinking 1s infinite;
+  opacity: 0;
+  right: -4px;
+}
+.Status-container.Status--Success .Status-redirectionMsg:after {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  right: -8px;
+}
+.Success-animation {
+  width: 64px;
+  height: 64px;
+}
+.Success-animation .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.65em;
+  margin-top: 34px;
+  margin-left: 20px;
+}
+.Success-animation .checkmark:after {
+  content: "";
+  -webkit-animation: checkmark 0.4s linear 0.3s forwards;
+  animation: checkmark 0.4s linear 0.3s forwards;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+  opacity: 0;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  border-right: 3px solid #fff;
+  border-top: 3px solid #fff;
+  position: absolute;
+  left: 0;
+  display: block;
+}
+.Success-animation .circle {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 0.97;
+  background-color: #0b5;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(48, 51, 55, 0.11);
+  box-shadow: 0 2px 5px 0 rgba(48, 51, 55, 0.11);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#00dd8c),
+    to(#00b753)
+  );
+  background: -o-linear-gradient(top, #00dd8c 0, #00b753 100%);
+  background: linear-gradient(180deg, #00dd8c, #00b753);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.Success-animation .circle:after {
+  content: "";
+  min-height: inherit;
+  font-size: 0;
+}
+@media screen and (min-width: 0 0) and (min-resolution: 0.001dpcm) {
+  .Success-animation .checkmark:after {
+    height: 1.6em;
+    width: 0.65em;
+    opacity: 1;
+    -ms-transform: scaleX(-1) rotate(135deg);
+  }
+}
+.mountain-top {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.mountain-top:before {
+  content: "";
+  position: absolute;
+  -webkit-transform: rotate(29deg) rotateY(-45deg) rotateX(220deg);
+  transform: rotate(29deg) rotateY(-45deg) rotateX(220deg);
+  width: 60%;
+  height: 120px;
+  top: -60px;
+  right: -36px;
+  background: #e0f6ea;
+}
+.mountain-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.mountain-footer:after,
+.mountain-footer:before {
+  content: "";
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  -webkit-transform: rotate(38deg) rotateY(-25deg) rotateX(210deg);
+  transform: rotate(38deg) rotateY(-25deg) rotateX(210deg);
+}
+.mountain-footer:before {
+  bottom: -60px;
+  left: -20px;
+  background: #c7f4e1;
+}
+.mountain-footer:after {
+  bottom: -80px;
+  left: 32px;
+  background: #00da83;
+}
+@-webkit-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    height: 0;
+    width: 0.65em;
+    opacity: 1;
+  }
+  to {
+    height: 1.6em;
+    width: 0.65em;
+    opacity: 1;
+  }
+}
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    height: 0;
+    width: 0.65em;
+    opacity: 1;
+  }
+  to {
+    height: 1.6em;
+    width: 0.65em;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.footer-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 16px;
+  -webkit-box-shadow: 0 -4px 8px rgba(107, 108, 109, 0.15);
+  box-shadow: 0 -4px 8px rgba(107, 108, 109, 0.15);
+  background: #fff;
+  z-index: 1;
+}
+.footer-container .amount-details {
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.footer-container .footer-btn {
+  width: 70%;
+  position: relative;
+  margin: auto;
+}
+.footer-container .footer-btn:after {
+  left: 0;
+  top: 0;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: -o-linear-gradient(
+    top,
+    hsla(0, 0%, 100%, 0.1),
+    rgba(0, 0, 0, 0.1)
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsla(0, 0%, 100%, 0.1)),
+    to(rgba(0, 0, 0, 0.1))
+  );
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.1),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+.footer-container .footer-btn:hover:after {
+  opacity: 0;
+}
+.footer-container .footer-btn[disabled] {
+  background: #e9e9ea !important;
+  color: #949494 !important;
+}
+.footer-container .footer-btn[disabled]:after {
+  background: none;
+}
+.PaymentStatus {
+  position: relative;
+  height: 552px;
+  background: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: visible;
+  z-index: 2;
+  padding-bottom: 56px;
+}
+.mobile .PaymentStatus {
+  height: 100%;
+}
+.Status-container {
+  position: relative;
+  height: 100%;
+  font-size: 14px;
+  text-align: center;
+  background: #fff;
+  color: #0d2366;
+}
+.Status-container .Status-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 152px 24px 80px;
+}
+.Status-container .Status-icon {
+  position: relative;
+  margin: 16px auto 20px;
+}
+.Status-container .Status-title {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.Status-container .Status-subtitle {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 18px;
+}
+.Status-container .Status-description {
+  margin: 18px 0;
+}
+.Status-container .Status-footer {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 15px;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: center;
+  padding: 20px 0;
+}
+.ScreenController {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #fafafa;
+  color: #4f4f4f;
+  padding: 15px 17px;
+}
+.ScreenController .Screen-title {
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 600;
+}
+.ScreenController .Screen-closeBtn,
+.ScreenController .Screen-progressDots,
+.ScreenController .Screen-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ScreenController .Screen-progressDots {
+  line-height: 28px;
+}
+.ScreenController .Screen-progressDots .progressDot {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  line-height: 18px;
+  border-radius: 50%;
+  -webkit-transition: 0.12s ease-in-out;
+  -o-transition: 0.12s ease-in-out;
+  transition: 0.12s ease-in-out;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.ScreenController .Screen-progressDots .progressDot.marked {
+  background: #fff;
+  opacity: 1;
+}
+.ScreenController .Screen-progressDots .progressDot .progressTick {
+  display: block;
+  margin-top: -7px;
+  opacity: 0;
+  -webkit-transition: 0.12s ease-in-out;
+  -o-transition: 0.12s ease-in-out;
+  transition: 0.12s ease-in-out;
+}
+.ScreenController .Screen-progressDots .progressDot .progressTick svg {
+  fill: #528ff0;
+}
+.ScreenController .Screen-progressDots .progressDot .progressTick svg path {
+  fill: inherit;
+}
+.ScreenController
+  .Screen-progressDots
+  .progressDot
+  .progressTick.progressTick--show {
+  opacity: 1;
+}
+.ScreenController .Screen-closeBtn {
+  margin-left: 4px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  cursor: pointer;
+  color: #8d97a1;
+}
+.ScreenController .Screen-closeBtn:hover {
+  opacity: 0.6;
+}
+.ScreenController .Screen-closeBtn span {
+  font-size: 24px;
+  line-height: 26px;
+}
+.PaymentForm-Header {
+  padding: 12px 16px;
+  -webkit-box-shadow: 10px 30px 30px -20px rgba(107, 108, 109, 0.1);
+  box-shadow: 10px 30px 30px -20px rgba(107, 108, 109, 0.1);
+  border-bottom: 1px solid #e1e5ea;
+}
+.PaymentForm-Header.hide {
+  visibility: collapse;
+}
+.PaymentForm-Header .merchant-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.PaymentForm-Header .merchant-container > img {
+  border-radius: 4px;
+}
+.PaymentForm-Header .merchant-container .merchant-name {
+  font-size: 16px;
+  line-height: 22px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #263a4a;
+}
+.PaymentForm-Header .back-button-container {
+  border-top: 1px solid #e1e5ea;
+  padding-top: 12px;
+  height: 32px;
+}
+.PaymentForm-Header .back-button-container .back-button {
+  cursor: pointer;
+}
+.PaymentForm-Header .back-button-container .back-button:hover {
+  opacity: 0.6;
+}
+.PaymentForm-Header .back-button-container .back-button svg path {
+  fill: #263a4a;
+}
+.banner {
+  padding: 12px 24px;
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+  font-size: 12px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+  line-height: 18px;
+}
+.banner.banner--error {
+  background-color: #fce8e3;
+  color: #d34c4c;
+}
+.Field.Field--CheckBox {
+  display: block;
+  cursor: pointer;
+}
+.Field.Field--CheckBox .Field-el {
+  border: none;
+  padding: 0;
+  cursor: inherit;
+}
+.Field.Field--CheckBox .Field-el:active {
+  border: none;
+}
+.Field.Field--CheckBox.Field--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.Field.Field--CheckBox .CheckBox-left,
+.Field.Field--CheckBox .CheckBox-mark {
+  vertical-align: middle;
+  display: inline-block;
+}
+.Field.Field--CheckBox .CheckBox-mark {
+  width: 14px;
+  height: 14px;
+  border-radius: 1px;
+  border: 1px solid #cad1d9;
+  background-color: #fff;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.Field.Field--CheckBox .CheckBox-mark:after {
+  content: "";
+  position: absolute;
+  color: #fff;
+  -webkit-transition: 0.12s ease-in;
+  -o-transition: 0.12s ease-in;
+  transition: 0.12s ease-in;
+  opacity: 0;
+  display: block;
+  width: 2px;
+  height: 5px;
+  border: solid #fff;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin: 2px 0 0 5px;
+}
+.Field.Field--CheckBox [type="checkbox"]:checked + .CheckBox-mark {
+  background-color: #429cff;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+.Field.Field--CheckBox [type="checkbox"]:checked + .CheckBox-mark:after {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) scale(1.5);
+  -ms-transform: rotate(45deg) scale(1.5);
+  transform: rotate(45deg) scale(1.5);
+}
+.Field.Field--CheckBox .CheckBox-label {
+  font-size: 13px;
+  line-height: 16px;
+}
+.Tooltip {
+  display: none;
+  position: absolute;
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  margin-top: 10px;
+  padding: 8px 12px;
+  line-height: 16px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: #fff;
+  background: #555;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 2px 0;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.05);
+  z-index: 3;
+  pointer-events: none !important;
+}
+.Tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  left: 50%;
+  margin: 0 0 -1px -10px;
+}
+.Tooltip.Tooltip--bottom {
+  top: 100%;
+}
+.Tooltip.Tooltip--bottom:after {
+  border-color: transparent transparent #555;
+  bottom: 100%;
+}
+.Tooltip.Tooltip--top {
+  bottom: 100%;
+}
+.Tooltip.Tooltip--top:after {
+  top: 100%;
+  border-color: #555 transparent transparent;
+}
+:focus.showHelp .Tooltip {
+  display: block;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out,
+    -webkit-transform 0.2s cubic-bezier(0.6, 1.6, 0.8, 1);
+  transition: opacity 0.2s ease-out,
+    -webkit-transform 0.2s cubic-bezier(0.6, 1.6, 0.8, 1);
+  -o-transition: 0.2s cubic-bezier(0.6, 1.6, 0.8, 1) transform,
+    0.2s ease-out opacity;
+  transition: transform 0.2s cubic-bezier(0.6, 1.6, 0.8, 1),
+    opacity 0.2s ease-out;
+  transition: transform 0.2s cubic-bezier(0.6, 1.6, 0.8, 1),
+    opacity 0.2s ease-out, -webkit-transform 0.2s cubic-bezier(0.6, 1.6, 0.8, 1);
+  pointer-events: auto;
+}
+button .Tooltip.Tooltip--top {
+  left: 50%;
+  -webkit-transform: translate(-50%, -8px);
+  -ms-transform: translate(-50%, -8px);
+  transform: translate(-50%, -8px);
+}
+.AmountForm {
+  position: relative;
+}
+.AmountForm .banner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.UserDetailsForm {
+  position: relative;
+}
+.CheckoutPlaceholder {
+  position: relative;
+  height: 100%;
+}
+.CheckoutPlaceholder #Checkout-parent {
+  position: absolute;
+  width: 100%;
+  top: -98px;
+  bottom: 0;
+}
+.CheckoutPlaceholder #Checkout-parent iframe {
+  height: 100% !important;
+}
+.PaymentForm-Body {
+  position: relative;
+  height: 440px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: visible;
+  z-index: 2;
+}
+.PaymentForm-Body .content {
+  height: 100%;
+  overflow-y: auto;
+}
+.PaymentForm-Body .content .UI-form {
+  height: 100%;
+}
+.PaymentForm-Body .content .UI-form .UI-form-fields {
+  height: 100%;
+  overflow-y: auto;
+  padding: 24px 16px 56px;
+}
+.PaymentForm-Body .content .UI-form .UI-form-fields > div {
+  padding-bottom: 80px;
+}
+.mobile .PaymentForm-Body {
+  height: 100%;
+  padding-bottom: 156px;
+}
+.PaymentForm {
+  position: relative;
+  text-align: left;
+  width: 344px;
+  font-size: 14px;
+  z-index: 1;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: normal;
+  overflow: hidden;
+  background: #fff;
+  -webkit-box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.24);
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.PaymentForm.shake {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+.mobile .PaymentForm {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.PaymentForm-form {
+  height: 100%;
+}
+.PaymentForm-form .razorpay-backdrop {
+  z-index: 3;
+}
+.PaymentForm--hideForm .PaymentForm-form {
+  display: none;
+}
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  12.5% {
+    -webkit-transform: translateX(-6px) rotateY(-5deg);
+    transform: translateX(-6px) rotateY(-5deg);
+  }
+  37.5% {
+    -webkit-transform: translateX(5px) rotateY(4deg);
+    transform: translateX(5px) rotateY(4deg);
+  }
+  62.5% {
+    -webkit-transform: translateX(-3px) rotateY(-3deg);
+    transform: translateX(-3px) rotateY(-3deg);
+  }
+  87.5% {
+    -webkit-transform: translateX(2px) rotateY(2deg);
+    transform: translateX(2px) rotateY(2deg);
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes shake {
+  0% {
+    -webkit-transform: none;
+    transform: none;
+  }
+  12.5% {
+    -webkit-transform: translateX(-6px) rotateY(-5deg);
+    transform: translateX(-6px) rotateY(-5deg);
+  }
+  37.5% {
+    -webkit-transform: translateX(5px) rotateY(4deg);
+    transform: translateX(5px) rotateY(4deg);
+  }
+  62.5% {
+    -webkit-transform: translateX(-3px) rotateY(-3deg);
+    transform: translateX(-3px) rotateY(-3deg);
+  }
+  87.5% {
+    -webkit-transform: translateX(2px) rotateY(2deg);
+    transform: translateX(2px) rotateY(2deg);
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, Muli, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  overflow: auto;
+}
+b {
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: $rzp_prime_color;
+  display: inline-block;
+}
+ol,
+p {
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+ol {
+  padding-left: 15px;
+  margin: 16px 0 32px;
+}
+ol li {
+  margin-bottom: 10px;
+}
+p {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+button {
+  color: inherit;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.UI-form.UI-form.Form--inactive .Field-content {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.UI-form.UI-form.Form--inactive .Field-content .Field-el {
+  pointer-events: none;
+}
+.UI-form.UI-form {
+  position: relative;
+  color: #263a4a;
+}
+.UI-form.UI-form .Field {
+  position: relative;
+  display: block;
+  margin: 24px 0 -21px;
+  -webkit-transition: 0.12s;
+  -o-transition: 0.12s;
+  transition: 0.12s;
+}
+.UI-form.UI-form .Field:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.UI-form.UI-form .Field:first-of-type {
+  margin-top: 0;
+}
+.UI-form.UI-form .Field--small .Field-wrapper {
+  width: 55%;
+}
+.UI-form.UI-form .Field .Field .Field-description,
+.UI-form.UI-form .Field .Field .Field-error {
+  display: none;
+}
+.UI-form.UI-form .Field-wrapper {
+  position: relative;
+  min-width: 160px;
+  color: #4f4f4f;
+  height: 48px;
+}
+.UI-form.UI-form .Field-wrapper .Field-el {
+  line-height: 48px;
+}
+.UI-form.UI-form .Field-wrapper .Field-el label {
+  line-height: 36px;
+}
+.UI-form.UI-form .Field-content {
+  margin-left: 0;
+}
+.UI-form.UI-form .Field-addon {
+  position: absolute;
+  top: 0;
+  display: table;
+  height: 100%;
+}
+.UI-form.UI-form .Field-addon > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+.UI-form.UI-form .Field-addon > * > .Field-content {
+  margin: 0;
+}
+.UI-form.UI-form .Field-error {
+  color: #b21528;
+  opacity: 0;
+  -webkit-transition: 0.12s;
+  -o-transition: 0.12s;
+  transition: 0.12s;
+  min-height: 20px;
+}
+.UI-form.UI-form .Field-description {
+  -webkit-transform: translateY(-21px);
+  -ms-transform: translateY(-21px);
+  transform: translateY(-21px);
+  -webkit-transition: 0.12s;
+  -o-transition: 0.12s;
+  transition: 0.12s;
+  overflow-wrap: break-word;
+  color: #8d97a1;
+}
+.UI-form.UI-form .Field-description,
+.UI-form.UI-form .Field-error {
+  font-size: 12px;
+  margin: 4px 0;
+  line-height: 16px;
+}
+.UI-form.UI-form .Field-addon--after {
+  right: 6px;
+}
+.UI-form.UI-form .Field-addon--before {
+  left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.UI-form.UI-form .Field-addon--after--CheckBox {
+  width: 100%;
+  right: 0;
+}
+.UI-form.UI-form .Field-addon--after--CheckBox .Field--CheckBox {
+  text-align: right;
+}
+.UI-form.UI-form .Field-addon--after--CheckBox .Field--CheckBox .Field-wrapper {
+  line-height: 48px;
+  height: 48px;
+}
+.UI-form.UI-form
+  .Field-addon--after--CheckBox
+  .Field--CheckBox
+  .Field-wrapper
+  .Field-el {
+  display: block;
+  line-height: 46px;
+  background: transparent;
+}
+.UI-form.UI-form
+  .Field-addon--after--CheckBox
+  .Field--CheckBox
+  .Field-wrapper
+  .CheckBox-mark {
+  width: 21px;
+  height: 21px;
+}
+.UI-form.UI-form
+  .Field-addon--after--CheckBox
+  .Field--CheckBox
+  .Field-wrapper
+  .CheckBox-mark:after {
+  margin: 6px 0 0 8px;
+}
+.UI-form.UI-form .Field--currency-1 .Field-addon--before + .Field-el {
+  padding-left: 20px;
+}
+.UI-form.UI-form .Field--currency-2 .Field-addon--before + .Field-el {
+  padding-left: 30px;
+}
+.UI-form.UI-form .Field--currency-3 .Field-addon--before + .Field-el {
+  padding-left: 36px;
+}
+.UI-form.UI-form .Field--currency-4 .Field-addon--before + .Field-el {
+  padding-left: 46px;
+}
+.UI-form.UI-form .Field--currency-long .Field-addon--before + .Field-el {
+  padding-left: 54px;
+}
+.UI-form.UI-form .Field-addon > span > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.UI-form.UI-form .Field--has-image img {
+  height: 46px;
+  margin-left: -9px;
+  margin-top: 1px;
+  margin-right: 4px;
+  border-bottom-left-radius: 1px;
+  border-top-left-radius: 1px;
+  border-right: 1px solid #e6e7e8;
+}
+.UI-form.UI-form
+  .Field--has-image
+  > .Field-content
+  > .Field-wrapper
+  > .Field-el {
+  padding-left: 58px;
+}
+.UI-form.UI-form .Field-el {
+  line-height: 16px;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  overflow: hidden;
+  font-size: 14px;
+  padding: 0 9px;
+  outline: none;
+  color: #414141;
+}
+.UI-form.UI-form .Field-el::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.UI-form.UI-form .Field-el::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.UI-form.UI-form .Field-el:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.UI-form.UI-form .Field-el::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.UI-form.UI-form .Field-el::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.UI-form.UI-form .Field.has-error {
+  margin-bottom: 0;
+}
+.UI-form.UI-form .Field.has-error .Field-el {
+  border-color: #b21528;
+}
+.UI-form.UI-form .Field.has-error .Field-error {
+  opacity: 1;
+}
+.UI-form.UI-form .Field.has-error .Field-error + .Field-description {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.UI-form.UI-form .Field--disabled .Field-el {
+  cursor: not-allowed;
+}
+.UI-form.UI-form .Field:not(.Field--disabled) .Field-el:hover {
+  border-color: #c1c1c1;
+}
+.UI-form.UI-form .Field:not(.Field--disabled) .Field-el:focus {
+  border-color: #528ff0;
+}
+.UI-form.UI-form .Field--select select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 2px;
+  -moz-appearance: none;
+  text-indent: 0.001px;
+  -o-text-overflow: "";
+  text-overflow: "";
+  cursor: pointer;
+}
+.UI-form.UI-form .Field--select .Field-wrapper:before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  margin-top: 22px;
+  width: 0;
+  height: 0;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  pointer-events: none;
+  z-index: 2;
+}
+.UI-form.UI-form .Field--textarea .Field-wrapper {
+  height: auto;
+  font-size: 0;
+}
+.UI-form.UI-form .Field--textarea textarea.Field-el {
+  max-height: 230px;
+  resize: vertical;
+  height: 48px;
+  min-height: 48px;
+  line-height: 48px;
+}
+.UI-form.UI-form .Field--textarea .Field-el--textarea-fake {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  overflow: hidden;
+  padding: 0 16px 0 0;
+  line-height: 48px;
+  font-size: 14px;
+  visibility: hidden;
+}
+.UI-form.UI-form .Field--textarea textarea.Field-el-multiplelines,
+.UI-form.UI-form
+  .Field--textarea
+  textarea.Field-el-multiplelines
+  + .Field-el--textarea-fake {
+  line-height: 40px;
+}
+.UI-form.UI-form .Field-label {
+  position: relative;
+  width: 100%;
+  font-size: 13px;
+  line-height: 20px;
+  color: #263a4a;
+  word-break: break-word;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.UI-form.UI-form .Field-label .text-optional {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-left: 4px;
+  display: inline-block;
+}
+.UI-form.UI-form .Field .symbol--red {
+  color: #b21528;
+  display: none;
+}
+.UI-form.UI-form .Field--required .symbol--red {
+  display: inline-block;
+}
+.UI-form.UI-form .Field--CheckBox .Field-wrapper {
+  min-width: unset;
+  max-width: unset;
+}
+.UI-form.UI-form .Field--CheckBox .Field-el {
+  border: none;
+}
+.UI-form.UI-form .Field--CheckBox .CheckBox-mark {
+  margin: 0;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border-color: #d6d7d8;
+}
+.UI-form.UI-form .Field--CheckBox .CheckBox-mark:after {
+  margin: 4px 0 0 7px;
+  color: #e6e7e8;
+  -webkit-transform: rotate(45deg) scale(1.5);
+  -ms-transform: rotate(45deg) scale(1.5);
+  transform: rotate(45deg) scale(1.5);
+  opacity: 1;
+  border-color: #d6d7d8;
+}
+.UI-form.UI-form .Field--counter .Field-label {
+  margin-bottom: 0;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper {
+  min-width: 108px;
+  max-width: 108px;
+  height: 36px;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper .Field-el {
+  line-height: 36px;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper button {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  font-size: 23px;
+  background: transparent;
+  padding: 0 0 3px 1px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  top: 0;
+  line-height: 100%;
+  font-weight: 700;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper button:disabled,
+.UI-form.UI-form .Field--counter .Field-wrapper button[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper button:hover {
+  background: #f6f6f6;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper button:active {
+  background: #e3e3e3;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper button:first-of-type {
+  left: 0;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+  border: none;
+  border-right: 1px solid #e6e7e8;
+  margin: 1px 0 0 1px;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper button:nth-of-type(2) {
+  right: 0;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+  border: none;
+  border-left: 1px solid #e6e7e8;
+  margin: 1px 1px 0 0;
+}
+.UI-form.UI-form .Field--counter .Field-wrapper .counter-value {
+  width: 100%;
+  padding: 0 32px;
+  display: block;
+  text-align: center;
+  background: #fff;
+}
+.UI-form.UI-form .Field-el[type="number"]::-webkit-inner-spin-button,
+.UI-form.UI-form .Field-el[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+.UI-form.UI-form--udf {
+  color: #414141;
+}
+.UI-form.UI-form--udf .Field-label {
+  font-size: 13px;
+  color: #757575;
+  margin-bottom: 2px;
+  line-height: 13px;
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  background: #fff;
+  width: auto;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all ease-out 0.2s;
+  transition: all 0.2s ease-out;
+}
+.UI-form.UI-form--udf .Field--label-upper .Field-label {
+  font-size: 12px;
+  top: -5px;
+  z-index: 1;
+  padding: 0 3px;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all ease-in 0.2s;
+  transition: all 0.2s ease-in;
+}
+.UI-form.UI-form--udf .Field--label-upper.has-error .Field-label {
+  color: #b21528;
+}
+.UI-form.UI-form--amount .Field--amount .Field-label {
+  font-weight: 600;
+}
+.UI-form.UI-form--amount .Field--amount div.Field-el {
+  pointer-events: none;
+}
+.UI-form.UI-form--amount .Field--amount div.Field-el,
+.UI-form.UI-form--amount .Field--amount input.Field-el {
+  border: 1px solid #e6e7e8;
+}
+.UI-form.UI-form--amount .Field--amount--error div.Field-el,
+.UI-form.UI-form--amount .Field--amount--error input.Field-el {
+  background: #fffcfc;
+  border: 1px solid #fcdada;
+}
+.UI-form.UI-form--amount .Field--amount--selected div.Field-el,
+.UI-form.UI-form--amount .Field--amount--selected input.Field-el {
+  background: #fcfdff;
+  border: 1px solid #dae7fc;
+}
+.UI-form.UI-form--amount .Field--amount--selected img {
+  border-color: #dae7fc;
+}
+.UI-form.UI-form--amount .amount-whole--small {
+  font-size: 14px;
+  font-weight: 600;
+}
+.UI-form.UI-form--amount .amount-decimal--small {
+  font-size: 12px;
+  color: #828282;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-family: Inter, ubuntu, helvetica, sans-serif;
+  color: #333;
+}
+.razorpay-payment-form {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: 0.3s ease-out opacity;
+  transition: opacity 0.3s ease-out;
+  z-index: 19999;
+}
+.razorpay-payment-form.mfix {
+  white-space: nowrap;
+}
+.razorpay-payment-form.mfix:after {
+  content: "";
+  height: 96%;
+  display: inline-block;
+  width: 0;
+  vertical-align: middle;
+}
+.razorpay-payment-form .btn {
+  cursor: pointer;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.mobile.razorpay-payment-form {
+  max-width: 414px;
+}
+.mobile.razorpay-payment-form:after {
+  content: none;
+}
+.test-mode-badge {
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  right: -50px;
+  top: 50px;
+  padding: 3px;
+  text-decoration: none;
+  background: #d64444;
+  border: 1px dashed #fff;
+  font-family: Inter, ubuntu, helvetica, sans-serif;
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: opacity 0.3s ease-in 0s;
+  -o-transition: opacity 0.3s ease-in 0s;
+  transition: opacity 0.3s ease-in 0s;
+  color: #fff;
+}
+.razorpay-backdrop {
+  min-height: 100%;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+}
+/*# sourceMappingURL=payment-form.css.map */
